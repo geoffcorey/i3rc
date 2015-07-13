@@ -88,7 +88,8 @@ bindsym XF86MonBrightnessDown exec xbacklight -dec 10 # decrease screen brightne
 bindsym XF86TouchpadToggle exec ~/bin/toggletouchpad.sh # toggle touchpad
 # lock
 exec --no-startup-id xset dpms 600
-set $Locker i3lock -i ~/.i3/oscar.png  && sleep 1
+set $Locker i3lock -i ~/.i3/dilbert.png  && sleep 1
+#set $Locker i3lock -i ~/.i3/oscar.png  && sleep 1
 #set $Locker i3lock -i ~/.i3/tile.png -t && sleep 1
 #set $Locker i3lock -i /home/gcorey/Downloads/forest_green_hexagon_tile_background_seamless.jpg && sleep 1
 set $mode_system System (l) lock, (e) logout, (s) suspend, (h) hibernate, (r) reboot, (Shift+s) shutdown
