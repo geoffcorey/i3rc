@@ -24,8 +24,10 @@ set $dk_grey #00ffff
 #set $yellow #c3bf9f
 #set $red #dca3a3
 
-set $font -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
-set $pangoFont pango:DejaVu Sans 8
+#set $font -*-terminus-medium-*-*-*-12-*-*-*-*-*-*-*
+set $font -*-Hack-Regular-*-*-*-12-*-*-*-*-*-*-*
+#set $pangoFont pango:DejaVu Sans 8
+set $pangoFont pango:Hack Regular 8
 
 # font for window titles. ISO 10646 = Unicode
 # font -misc-fixed-medium-r-normal--13-120-75-75-C-70-iso10646-1
