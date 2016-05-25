@@ -75,8 +75,8 @@ bindsym $mod+u exec i3-input -F 'workspace "%s"' -P 'Workspace name: '
 bindsym $mod+Shift+U exec i3-input -F 'move container to workspace "%s"' -P 'Move container to workspace name: '
 
 # volume control
-bindsym $mod+equal exec "pactl set-sink-volume 1 +5%"
-bindsym $mod+minus exec "pactl set-sink-volume 1 -- -5%"
+bindsym $mod+equal exec "pactl set-sink-mute 0 false ; pactl set-sink-volume 1 +5%"
+bindsym $mod+minus exec "pactl set-sink-mute 0 false ; pactl -- set-sink-volume 1 -5%"
 bindsym XF86AudioRaiseVolume exec "pactl set-sink-mute 0 false ; pactl set-sink-volume 2 +5%"
 bindsym XF86AudioLowerVolume exec "pactl set-sink-mute 0 false ; pactl -- set-sink-volume 2 -5%"
 bindsym XF86AudioMute exec "pactl set-sink-mute 2 toggle"
@@ -255,3 +255,6 @@ bar {
 exec "$HOME/bin/connect-screen -sw"
 exec "$HOME/bin/xinitscript"
 # vim:filetype=i3
+exec --no-startup-id "i3-msg 'workspace 1; append_layout /home/gwcorey/.i3/workspace-1.json'"
+exec --no-startup-id "i3-msg 'workspace 2; append_layout /home/gwcorey/.i3/workspace-2.json'"
+exec --no-startup-id "i3-msg 'workspace 3; append_layout /home/gwcorey/.i3/workspace-3.json'"
