@@ -56,14 +56,14 @@ TEXT
 {"full_text": "∷", "separator":false, "separator_block_width":1, "color":"\#00FF00"},
 {"full_text": "${exec $HOME/bin/external-ip}", "color":"\#7f9f7f", "separator":false, "separator_block_width": 3},
 {"full_text": "wlan0:", "separator": false, "separator_block_width":3, "color":"\#00FF00"},
-{"full_text": "${upspeed wlan0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
+{"full_text": "${upspeed wlp3s0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
 {"full_text": "↑", "separator":false, "separator_block_width":1, "color":"\#00FF00"},
-{"full_text": "${downspeed wlan0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
+{"full_text": "${downspeed wlp3s0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
 {"full_text": "↓"},
 {"full_text": "eth0:", "separator": false, "separator_block_width":3, "color":"\#00FF00"},
-{"full_text": "${upspeed eth0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
+{"full_text": "${upspeed enp0s25}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
 {"full_text": "↑", "separator":false, "separator_block_width":1, "color":"\#00FF00"},
-{"full_text": "${downspeed eth0}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
+{"full_text": "${downspeed enp0s25}/s", "color":"\#a9a999", "separator":false, "separator_block_width":5, "min_width":45, "align":"right"},
 {"full_text": "↓", "color":"\#00FF00"}
 
 ],
