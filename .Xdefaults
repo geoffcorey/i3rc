@@ -1,7 +1,8 @@
 URxvt.foreground: #dcdccc
 
 !URxvt.depth: 32
-URxvt*background: #3f3f3f
+!URxvt*background: #3f3f3f
+URxvt*background: #000000
 
 URxvt.saveLines:32767
 URxvt.scrollBar: false

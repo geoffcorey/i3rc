@@ -120,7 +120,11 @@ font $font
     bindsym $mod+shift+d exec i3-dmenu-desktop
     bindsym $mod+grave exec dmenu | xargs swaymsg
 # passwords
-    bindsym $mod+p exec pass-dmenu
+    bindsym $mod+p exec rofi-pass
+# surfraw
+    bindsym $mod+Shift+s exec surfraw -browser=firefox $(sr -elvi | awk -F'-' '{print $1}' | sed '/:/d' | awk '{$1=$1};1' | rofi -kb-row-select "Tab" -kb-row-tab "Control+space" -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000" -dmenu -mesg ">>> Tab = Autocomplete" -i -p "websearch: ")
+    bindsym $mod+Shift+b exec ~/bin/rofi-sr-bm
+    # bindsym $mod+Shift+b exec surfraw -browser=firefox $(cat ~/.config/surfraw/bookmarks | sed '/^$/d' | sed '/^#/d' | sed '/^\//d' | sort -n | rofi -color-window "#000000, #000000, #000000" -color-normal "#000000, #b3e774, #000000, #b3e774, #000000" -color-active "#000000, #b3e774, #000000, #b3e774, #000000" -color-urgent "#000000, #b3e774, #000000, #b3e774, #000000" -dmenu -mesg ">>> Edit to add new bookmarks at ~/.config/surfraw/bookmarks" -i -p "bookmarks: ")
 # volume controls (special keys on keyboard)
     bindsym XF86AudioMute exec pa-adjust mute
     bindsym XF86AudioLowerVolume exec pa-adjust minus
@@ -196,7 +200,7 @@ bindsym $mod+Shift+c reload
 # restart i3 inplace (preserves your layout/session, can be used to upgrade i3)
 bindsym $mod+Shift+r restart
 # exit i3 (logs you out of your X session)
-bindsym $mod+Shift+e exec "i3-nagbar -t warning -m 'You pressed the exit shortcut. Do you really want to exit i3? This will end your X session.' -b 'Yes, exit i3' 'i3-msg exit'"
+bindsym $mod+Shift+e exit
 
 # resize window (you can also use the mouse for that)
 mode "resize" {
@@ -264,5 +268,7 @@ new_window normal 4
 
 #include ~/.config/sway/config.d/`hostname`/*
 #include ~/.config/sway/config.d/*
+for_window [title="gnome-calculator"] floating enabled; border pixel
+
 output * bg `wallpaper` fill
 exec startup sway
