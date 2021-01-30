@@ -4,19 +4,18 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
-       "height": 600,
-       "width": 800,
-       "x": 560,
-       "y": 240
+       "height": 1060,
+       "width": 960,
+       "x": 960,
+       "y": 20
     },
     "marks": [],
     "name": "Telegram",
     "percent": 0.5,
     "swallows": [
        {
-       // "class": "^TelegramDesktop$",
-       // "instance": "^Telegram$",
-       // "title": "^Telegram$"
+        "class": "^TelegramDesktop$",
+        "instance": "^Telegram$"
        }
     ],
     "type": "con"
@@ -27,20 +26,19 @@
     "current_border_width": 1,
     "floating": "auto_off",
     "geometry": {
-       "height": 728,
-       "width": 1197,
-       "x": 361,
-       "y": 176
+       "height": 1058,
+       "width": 1918,
+       "x": 1,
+       "y": 21
     },
     "marks": [],
     "name": "Signal",
     "percent": 0.5,
     "swallows": [
        {
-       // "class": "^Signal$",
-       // "instance": "^signal$",
-       // "title": "^Signal$",
-       // "window_role": "^browser\\-window$"
+        "class": "^Signal$",
+        "instance": "^signal$",
+        "window_role": "^browser\\-window$"
        }
     ],
     "type": "con"
